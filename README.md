@@ -47,8 +47,6 @@ npx streamdeck link com.rodolfo-cuevas.winlose-obs-counter.sdPlugin
 - `npm run build` — builds the plugin.
 - `npm run watch` — builds in watch mode and restarts the plugin on save. To see icon or manifest changes, quit and reopen the Stream Deck app.
 
-More details in [DEVELOP.md](DEVELOP.md).
-
 ## Author
 
 Rodolfo Cuevas
