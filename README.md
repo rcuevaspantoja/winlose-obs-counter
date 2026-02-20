@@ -1,54 +1,54 @@
 # Win/Lose OBS Counter
 
-Plugin para **Elgato Stream Deck** que mantiene un contador de victorias y derrotas en un archivo de texto. Pensado para usarlo en directo: puedes mostrar el marcador en **OBS** como fuente de texto y actualizarlo desde el Stream Deck.
+Plugin for **Elgato Stream Deck** that keeps a win/lose counter in a text file. Designed for live streaming: you can show the score in **OBS** as a text source and update it from the Stream Deck.
 
-## Qué hace
+## What it does
 
-- **Increment Counter**: Botones para sumar una victoria o una derrota. Los valores se guardan en un archivo de texto en formato `win-lose` (por ejemplo `3-1`).
-- **Score Display**: Muestra el resultado total (victorias-derrotas) en la tecla, en verde o rojo. Solo lectura.
-- **Reset Counter**: Pone el contador a 0-0.
+- **Increment Counter**: Buttons to add a win or a loss. Values are stored in a text file in `win-lose` format (e.g. `3-1`).
+- **Score Display**: Shows the total score (wins minus losses) on the key in green or red. Read-only.
+- **Reset Counter**: Resets the counter to 0-0.
 
-El archivo es un simple `.txt` con una línea `win-lose`. En OBS añades una **Fuente de texto** que lee ese archivo y se actualiza cuando cambias los valores desde el Stream Deck.
+The file is a plain `.txt` with a single `win-lose` line. In OBS you add a **Text** source that reads that file and updates when you change the values from the Stream Deck.
 
-## Requisitos
+## Requirements
 
-- Stream Deck (app 6.9 o superior)
-- Node.js 20 (para compilar)
-- Windows 10+ o macOS 12+
+- Stream Deck (app 6.9 or higher)
+- Node.js 20 (to build)
+- Windows 10+ or macOS 12+
 
-## Instalación
+## Installation
 
-1. Clona el repositorio.
-2. En la raíz del proyecto:
+1. Clone the repository.
+2. In the project root:
    ```bash
    npm install
    npm run build
    ```
-3. Instala el plugin en Stream Deck:
-   - **Windows**: copia la carpeta `com.rodolfo-cuevas.winlose-obs-counter.sdPlugin` a `%APPDATA%\Elgato\StreamDeck\Plugins\`
-   - **macOS**: copia la misma carpeta a `~/Library/Application Support/com.elgato.StreamDeck/Plugins/`
-4. Reinicia la aplicación Stream Deck.
+3. Install the plugin in Stream Deck:
+   - **Windows**: copy the folder `com.rodolfo-cuevas.winlose-obs-counter.sdPlugin` to `%APPDATA%\Elgato\StreamDeck\Plugins\`
+   - **macOS**: copy the same folder to `~/Library/Application Support/com.elgato.StreamDeck/Plugins/`
+4. Restart the Stream Deck application.
 
-Para desarrollo puedes enlazar el plugin en lugar de copiarlo:
+For development you can link the plugin instead of copying it:
 
 ```bash
 npx streamdeck link com.rodolfo-cuevas.winlose-obs-counter.sdPlugin
 ```
 
-## Uso en OBS
+## Using with OBS
 
-1. Crea un archivo de texto (por ejemplo `C:\stream\score.txt`) y escribe en la primera línea: `0-0`.
-2. En el Stream Deck, añade una acción **Increment Counter** (o **Score Display** / **Reset Counter**).
-3. En la configuración de la acción, indica la ruta de ese archivo y el tipo (Win o Lose) si aplica.
-4. En OBS, añade una **Fuente** → **Texto (GDI+)** (o “Leer desde archivo” si tu versión lo permite) y apunta al mismo archivo. Así el texto en pantalla se actualiza cuando cambias el contador desde el Stream Deck.
+1. Create a text file (e.g. `C:\stream\score.txt`) and write on the first line: `0-0`.
+2. In Stream Deck, add an **Increment Counter** action (or **Score Display** / **Reset Counter**).
+3. In the action settings, set the path to that file and the type (Win or Lose) if applicable.
+4. In OBS, add a **Source** → **Text (GDI+)** (or “Read from file” if your version supports it) and point it to the same file. The on-screen text will update when you change the counter from the Stream Deck.
 
-## Desarrollo
+## Development
 
-- `npm run build` — compila el plugin.
-- `npm run watch` — compila en modo watch y reinicia el plugin al guardar. Para ver cambios de íconos o del manifest, cierra y vuelve a abrir la app Stream Deck.
+- `npm run build` — builds the plugin.
+- `npm run watch` — builds in watch mode and restarts the plugin on save. To see icon or manifest changes, quit and reopen the Stream Deck app.
 
-Más detalles en [DEVELOP.md](DEVELOP.md).
+More details in [DEVELOP.md](DEVELOP.md).
 
-## Autor
+## Author
 
 Rodolfo Cuevas
