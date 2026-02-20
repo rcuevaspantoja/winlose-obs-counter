@@ -1,0 +1,83 @@
+{
+	"Name": "Win/Lose OBS counter",
+	"Version": "0.1.0.0",
+	"Author": "Rodolfo Cuevas",
+	"Actions": [
+		{
+			"Name": "Increment Counter",
+			"UUID": "com.rodolfo-cuevas.winlose-obs-counter.increment",
+			"Icon": "imgs/actions/demo/icon",
+			"Tooltip": "Displays a count, which increments by one on press.",
+			"PropertyInspectorPath": "ui/increment-counter.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/demo/key",
+					"TitleAlignment": "middle",
+					"FontSize": 18
+				}
+			],
+			"UserTitleEnabled": false
+		},
+		{
+			"Name": "Score Display",
+			"UUID": "com.rodolfo-cuevas.winlose-obs-counter.score-display",
+			"Icon": "imgs/actions/demo/icon",
+			"Tooltip": "Shows the total score (wins-losses) in green and red. Read-only.",
+			"PropertyInspectorPath": "ui/score-display.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/demo/score",
+					"TitleAlignment": "middle"
+				}
+			],
+			"UserTitleEnabled": false
+		},
+		{
+			"Name": "Reset Counter",
+			"UUID": "com.rodolfo-cuevas.winlose-obs-counter.reset",
+			"Icon": "imgs/actions/demo/icon",
+			"Tooltip": "Resets the counter file to 0-0.",
+			"PropertyInspectorPath": "ui/reset-counter.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/demo/key-reset",
+					"TitleAlignment": "middle"
+				}
+			],
+			"UserTitleEnabled": false
+		}
+	],
+	"Category": "Win/Lose OBS counter",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"Description": "A Win/Lose counter host on a text file to count using the streamdeck and displaying the result on OBS as source>text",
+	"Icon": "imgs/plugin/marketplace",
+	"SDKVersion": 3,
+	"Software": {
+		"MinimumVersion": "6.9"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "12"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "20",
+		"Debug": "enabled"
+	},
+	"UUID": "com.rodolfo-cuevas.winlose-obs-counter"
+}

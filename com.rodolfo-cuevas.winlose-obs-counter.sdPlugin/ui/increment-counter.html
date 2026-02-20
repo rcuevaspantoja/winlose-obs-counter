@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>Increment Counter Settings</title>
+    <meta charset="utf-8" />
+    <script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+</head>
+
+<body>
+
+   <sdpi-item>
+    <spam>Select a text file .txt to store the counter.</spam>
+   </sdpi-item>
+
+    <sdpi-item label="File">
+        <sdpi-file setting="txt-file" accept=".txt,text/plain">
+        
+        </sdpi-file>
+    </sdpi-item>
+
+    <sdpi-item label="Type">
+        <sdpi-select setting="type" placeholder="Please choose an option">
+            <option value="win">Win</option>
+            <option value="lose">Lose</option>
+        </sdpi-select>
+    </sdpi-item>
+
+    <sdpi-item label="Cooldown">
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <sdpi-checkbox setting="preventDoubleInput"></sdpi-checkbox>
+            <span style="line-height: 1;">Add a 3 seconds cooldown to prevent double inputs</span>
+        </div>
+    </sdpi-item>
+
+</body>
+
+</html>
