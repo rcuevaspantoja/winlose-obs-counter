@@ -1,6 +1,6 @@
 {
 	"Name": "Win/Lose OBS counter",
-	"Version": "0.1.0.0",
+	"Version": "0.1.0.1",
 	"Author": "Rodolfo Cuevas",
 	"Actions": [
 		{
@@ -14,7 +14,7 @@
 			],
 			"States": [
 				{
-					"Image": "imgs/actions/demo/key",
+					"Image": "imgs/demo/key",
 					"TitleAlignment": "middle",
 					"FontSize": 18
 				}
