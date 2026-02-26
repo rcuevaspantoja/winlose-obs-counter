@@ -6,7 +6,7 @@
 		{
 			"Name": "Increment Counter",
 			"UUID": "com.rodolfo-cuevas.winlose-obs-counter.increment",
-			"Icon": "imgs/actions/demo/icon",
+			"Icon": "imgs/actions/final/increment/icon",
 			"Tooltip": "Displays a count, which increments by one on press.",
 			"PropertyInspectorPath": "ui/increment-counter.html",
 			"Controllers": [
@@ -24,7 +24,7 @@
 		{
 			"Name": "Score Display",
 			"UUID": "com.rodolfo-cuevas.winlose-obs-counter.score-display",
-			"Icon": "imgs/actions/demo/icon",
+			"Icon": "imgs/actions/final/score/icon",
 			"Tooltip": "Shows the total score (wins-losses) in green and red. Read-only.",
 			"PropertyInspectorPath": "ui/score-display.html",
 			"Controllers": [
@@ -41,7 +41,7 @@
 		{
 			"Name": "Reset Counter",
 			"UUID": "com.rodolfo-cuevas.winlose-obs-counter.reset",
-			"Icon": "imgs/actions/demo/icon",
+			"Icon": "imgs/actions/final/reset/icon",
 			"Tooltip": "Resets the counter file to 0-0.",
 			"PropertyInspectorPath": "ui/reset-counter.html",
 			"Controllers": [
