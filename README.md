@@ -2,6 +2,12 @@
 
 Plugin for **Elgato Stream Deck** that keeps a win/lose counter in a text file. Designed for live streaming: you can show the score in **OBS** as a text source and update it from the Stream Deck.
 
+![Preview 1](https://raw.githubusercontent.com/rcuevaspantoja/winlose-obs-counter/main/imgs/1.png)
+
+![Preview 2](https://raw.githubusercontent.com/rcuevaspantoja/winlose-obs-counter/main/imgs/2.png)
+
+![Preview 3](https://raw.githubusercontent.com/rcuevaspantoja/winlose-obs-counter/main/imgs/3.png)
+
 ## What it does
 
 - **Increment Counter**: Buttons to add a win or a loss. Values are stored in a text file in `win-lose` format (e.g. `3-1`).
